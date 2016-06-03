@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="uf-8">
+    <title>GOTO</title>
+    <style>
+        table input {width: calc(100% - 6px);}
+        pre {margin: 0;}
+    </style>
+</head>
+<body>
+    <p><input type="checkbox" id="newtab"> Open in New Tab</p>
+    <table border="1" style="width: 100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>RegExp Filter</th>
+                <th>URL</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="result-body"></tbody>
+    </table>
+    <p><button type="button" id="create">New Rule</button></p>
+	<p>Input "<kbd>\</kbd>" in the omnibox and then press <kbd>Tab</kbd> to use GOTO.</p>
+    <script src="options.js"></script>
+</body>
+</html>
