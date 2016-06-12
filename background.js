@@ -55,13 +55,13 @@ chrome.omnibox.onInputEntered.addListener(function(text){
   if(text.indexOf('>>> ')==0)
     open_tab(text.substr(4,text.length));
   else {
-    for(int i=0;i<rules.length;i++) {
+    for(var i=0;i<rules.length;i++) {
       var re=RegExp(rules[i][1]);
       if(re.test(text)) {
         open_tab(text.replace(re,rules[i][2]));
         return;
       }
-    });
+    }
     alert('输入未匹配任何规则');
   }
 });
