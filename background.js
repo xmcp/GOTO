@@ -40,14 +40,14 @@ chrome.omnibox.onInputChanged.addListener(function(text,suggest){
     if(re.test(text))
       sug.push({
         content: '>>> '+text.replace(re,rule[2]),
-        description: '<dim>'+esc('<'+rule[0]+'>')+'</dim> <match>'+esc(text)+'</match> <url>'+esc(text.replace(re,rule[2]))+'</url>'
+        description: '<dim>'+esc(text)+'</dim> <match>'+esc('<'+rule[0]+'>')+'</match> <url>'+esc(text.replace(re,rule[2]))+'</url>'
       });
   });
   if(sug.length) {
     chrome.omnibox.setDefaultSuggestion({description:sug.splice(0,1)[0].description});
     suggest(sug);
   } else {
-    chrome.omnibox.setDefaultSuggestion({description:'<dim>&lt;无匹配&gt;</dim> '+esc(text)});
+    chrome.omnibox.setDefaultSuggestion({description:'<dim>'+esc(text)+'</dim> &lt;无匹配&gt;'});
   }
 });
 
