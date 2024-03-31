@@ -1,24 +1,25 @@
 {
-  "manifest_version": 2,
-
-  "name": "GOTO",
-  "description": "地址栏快速跳转",
-  "version": "1.0",
-  "homepage_url": "http://s.xmcp.ml/",
-
-  "icons": {
-    "16": "icon-16.png",
-    "48": "icon-48.png",
-    "128":"icon-128.png"
-  },
-  
-  "omnibox": {"keyword": "\\"},
-  "permissions": [
-    "tabs"
-  ],
-  
-  "background": {
-    "scripts": ["background.js"]
-  },
-  "options_page": "options.html"
+    "manifest_version": 3,
+   
+    "name": "GOTO",
+    "description": "地址栏快速跳转",
+    "version": "1.0",
+    "homepage_url": "http://s.xmcp.ml/",
+   
+    "icons": {
+        "16": "icon-16.png",
+        "48": "icon-48.png",
+        "128":"icon-128.png"
+    },
+    
+    "omnibox": {"keyword": "\\"},
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    
+    "background": {
+        "service_worker": "background.js"
+    },
+    "options_page": "options.html"
 }
